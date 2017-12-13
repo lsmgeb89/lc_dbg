@@ -138,7 +138,7 @@ static TreeNode* Deserialize(string data) {
   bool left_child = true;
 
   // remove all spaces
-  data.erase(remove_if(data.begin(), data.end(), isspace), data.end());
+  data.erase(remove_if(data.begin(), data.end(), [](char x){ return isspace(x); }), data.end());
 
   if (data.empty() || data.front() != '[' || data.back() != ']') {
     return nullptr;
