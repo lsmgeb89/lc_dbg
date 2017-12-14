@@ -76,7 +76,7 @@ struct UndirectedGraphNode {
 
 // Function for creating a singly-linked list
 template<typename NodeType>
-static NodeType* MakeList(const vector<int> &nums) {
+NodeType* MakeList(const vector<int> &nums) {
   NodeType dummy(0);
   NodeType* iter(&dummy);
 
@@ -89,7 +89,7 @@ static NodeType* MakeList(const vector<int> &nums) {
 }
 
 // Function for printing a singly-linked list
-static string ListToString(ListNode *head) {
+string ListToString(ListNode *head) {
   stringstream ss;
 
   while (head) {
@@ -101,7 +101,7 @@ static string ListToString(ListNode *head) {
 }
 
 // Function for printing a singly-linked list with a random pointer
-static string RandomListToString(RandomListNode *head) {
+string RandomListToString(RandomListNode *head) {
   stringstream ss;
 
   while (head) {
@@ -116,7 +116,7 @@ static string RandomListToString(RandomListNode *head) {
 
 // Function for destroying a singly-linked list
 template<typename NodeType>
-static void DestroyList(NodeType *head) {
+void DestroyList(NodeType *head) {
   NodeType *tmp(head);
 
   while (head) {
@@ -127,7 +127,7 @@ static void DestroyList(NodeType *head) {
 }
 
 // Function for deserializing a binary tree
-static TreeNode* Deserialize(string data) {
+TreeNode* Deserialize(string data) {
   size_t begin = 0;
   size_t end = 0;
   string val_str;
@@ -147,7 +147,7 @@ static TreeNode* Deserialize(string data) {
     data.pop_back();
     data += ",";
   }
-  
+
   while ((end = data.find(",", begin)) != string::npos) {
     val_str = data.substr(begin, end - begin);
     begin = end + 1;
