@@ -62,6 +62,16 @@ struct TreeNode {
   TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
+// Definition for binary tree with next pointer
+struct TreeLinkNode {
+  int val;
+  TreeLinkNode *left;
+  TreeLinkNode *right;
+  TreeLinkNode *next;
+
+  TreeLinkNode(int x) : val(x), left(nullptr), right(nullptr), next(nullptr) {}
+};
+
 // Definition for undirected graph
 struct UndirectedGraphNode {
   int label;
